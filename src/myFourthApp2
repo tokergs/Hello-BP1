@@ -1,1 +1,60 @@
+import java.util.Scanner;
 
+public class myFourthApp2{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            System.out.println("Choose an operation:");
+            System.out.println("1.Add");
+            System.out.println("2.Substruct");
+            System.out.println("3.Multiply");
+            System.out.println("4.Divide");
+            System.out.println("5.Exit");
+
+            int choice = scanner.nextInt();
+            if(choice == 5){
+                System.out.println("Good job");
+                break;
+
+            }
+            else if (choice < 1 || choice > 4 ){
+                System.out.println("invalid choice");
+                continue;
+            }
+            System.out.print("Enter the first number:");
+            double num1 = scanner.nextDouble();
+
+            System.out.print("Enter the second number:");
+            double num2 = scanner.nextDouble();
+
+            double result = 0;
+            String operation = "";
+
+            switch (choice){
+                case 1:
+                    result = num1 + num2;
+                    operation = "addition";
+                    break;
+                case 2:
+                    result = num1 - num2;
+                    operation = "substraction";
+                    break;
+                case 3:
+                    result = num1 * num2;
+                    operation = "multiplication";
+                    break;
+                case 4:
+                    if (num2 == 0){
+                        System.out.println("Error");
+                        continue;
+
+                    }
+                    result = num1/num2;
+                    operation = "division";
+                    break;
+            }
+            System.out.println("The result of "+ operation+"is " + result);
+
+        }
+    }
+}
