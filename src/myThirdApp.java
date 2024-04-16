@@ -62,45 +62,38 @@ public class myThirdApp{public static void main(String[] args) {
 }
 */
 
-// task 2
-
 import java.util.Scanner;
 
-public class Main {
+public class myThirdApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
+        // Task 1:
         while (true) {
             System.out.print("Enter the number of days: ");
             int days = scanner.nextInt();
-            
+
             if (days <= 0) {
                 System.out.println("Exiting program...");
                 break;
             }
-            
+
             int weeks = days / 7;
             int remainingDays = days % 7;
-            
+
             System.out.println(days + " days is " + weeks + " weeks and " + remainingDays + " days.");
+
+
+            scanner.nextLine();
         }
-        
-        scanner.close();
-    }
-}
 
-// task 3
-
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+        // Task 2
         System.out.print("Enter the temperature in Celsius: ");
         double celsius = scanner.nextDouble();
 
-        System.out.println("Temperature in Fahrenheit: " + 1.8 * celsius + 32.0);
-        System.out.println("Temperature in Kelvin: " + celsius + 273.16);
+        System.out.println("Temperature in Fahrenheit: " + (1.8 * celsius + 32.0));
+        System.out.println("Temperature in Kelvin: " + (celsius + 273.16));
+
+        scanner.close();
     }
 }
