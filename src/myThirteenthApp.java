@@ -8,7 +8,7 @@ public class myThirteenthApp {
         String inputFilePath = "";
         String outputFilePath = "";
 
-        // Get input file path from the user
+
         while (true) {
             System.out.println("Please provide the path for the input text file:");
             inputFilePath = scanner.nextLine();
@@ -19,11 +19,11 @@ public class myThirteenthApp {
             }
         }
 
-        // Get output file path from the user
+
         System.out.println("Please provide the path for the output file:");
         outputFilePath = scanner.nextLine();
 
-        // Read the input file and process the content
+
         Map<String, Integer> wordCountMap = new HashMap<>();
         int totalWords = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath))) {
@@ -41,14 +41,14 @@ public class myThirteenthApp {
             return;
         }
 
-        // Display the results to the user
+
         System.out.println("Total number of words: " + totalWords);
         System.out.println("Word occurrences:");
         for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
-        // Write the results to the output file
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
             writer.write("Filename: " + inputFilePath + "\n");
             writer.write("Total number of words: " + totalWords + "\n");
